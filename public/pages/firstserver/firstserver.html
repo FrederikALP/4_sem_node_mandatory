@@ -1,21 +1,45 @@
 
     <h1>First Server</h1>
 
-    <p>
+    <pre><p>
         - Callback functions
-    </p>
+
+        const running = (name) => console.log(`${name} is running `);
+// this is a callback function. The function is making a call back to a different function.
+doActionWithSomeone(running, "Anders");
+
+// oneliner callback
+// doActionWithSomeoneOneLiner((name) => (console.log(`${name} is doing`), 'Frederik'));
+doActionWithSomeone(name => (console.log(`${name} anything`)), "stuff");
+    </p></pre>
     <p>
         - Clean code / code conventions
     </p>
-    <p>
+    <pre><p>
         - Package.json
-    </p>
-    <p>
+
+        // entrypoint       
+java - pom.xml                      node/javascript - package.json
+Use `npm install "pkg"` afterwards to install a package and
+    save it as a dependency in the package.json file.
+    </p></pre>
+    <pre><p>
         - Importing in Node.js
-    </p>
-    <p>
+
+        //import express
+        //importing library
+        const express = require("express");
+        //importing app
+        const app = express();
+        // oneliner(cannot access lib functions)
+        // const app = require("express")();
+    </p></pre>
+    <pre><p>
         - Body Parsing
-    </p>
+
+        // allow us to parse json (body-parser)
+app.use(express.json());
+    </p></pre>
 
 
     <script src="./pages/firstserver/firstserver.js"></script>

@@ -1,18 +1,104 @@
 
     <h1>Express</h1>
    
-    <p>
+    <pre><p>
         Scripts
-    </p>
-    <p>
+
+        build steps                         scripts
+
+        {
+            "scripts": {
+             "start-dev": "cross-env PORT=3000 nodemon app.js",
+             "start": "node app.js",
+             "test": "echo \"Error: no test specified\" && exit 1"
+           }
+    </p></pre>
+    <pre><p>
         Environment Variables in Node.
-    </p>
-    <p>
+
+        // create a fallback port
+const PORT = process.env.PORT || 9000;
+
+// to run on a different port
+// PORT="NUMBER" nodemon app.js
+// For windows - SET PORT="NUMBER"" && node app.js 
+const server = app.listen(PORT, () => {
+    console.log("The Server is running", server.address().port);
+});
+
+//npm i --save-dev cross-env
+//cross user/platform environment package
+
+{
+    "scripts": {
+     "start-dev": "cross-env PORT=3000 nodemon app.js",
+     "start": "node app.js",
+     "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "dependencies": {
+     "express": "^4.17.3"
+   },
+   "devDependencies": {
+     "cross-env": "^7.0.3"
+   }
+ }
+    </p></pre>
+    <pre><p>
         Importing / Exporting
-    </p>
-    <p>
+
+        // importing modules from dinosaurs folder, specifically from dinosaurs.js
+// using destructurizing to access the specific function you can use a comma to import additional things
+// const { calculateAmountOfCoolDinosaurs } = require("./dinosaurs/dinosaurs.js");
+// console.log(calculateAmountOfCoolDinosaurs());
+
+const dinosaurrouter = require("./routers/dinosaurrouter.js");
+// app.use("/dinosaurs", dinosaurrouter.router);     // this is being used to add another /endpointname/ to the url
+app.use(dinosaurrouter.router);  //only uses the endpoint specified in the router
+
+        // for exporting singular things
+//module.exports = router;
+
+// for exporting several items
+module.exports = {
+    router
+};
+    </p></pre>
+    <pre><p>
         Routers
-    </p>
+        
+        const { application } = require("express");
+
+        // it is not another app/server
+        // dummy router named by Anders, allows you to setup routes, but not smart enough to set up a server
+        const router = require("express").Router();
+        const { calculateAmountOfCoolDinosaurs } = require("../dinosaurs/dinosaurs.js");
+        
+        router.get("/calculatecooldinosaurs", (req, res) => {
+            res.send({ data: calculateAmountOfCoolDinosaurs() });
+        });
+        
+        // redirection method
+        router.get("/amountofccooldinosaurs",(req, res) => {
+            res.redirect("/calculatecooldinosaurs");
+        });
+        
+        // localhost:3000/coolestdinosaur?cool=yes
+        router.get("/coolestdinosaur", (req,res) => {
+            if (req.query.cool === "yes") {
+                return res.send({ dinosaur: "Mosasaurus" });
+            }
+            res.send({ dinosaur: "T. Rex" });
+        });
+        
+        // for exporting singular things
+        //module.exports = router;
+        
+        // for exporting several items
+        module.exports = {
+            router
+        };
+
+    </p></pre>
     
     <script src="./pages/express/express.js"></script>
     

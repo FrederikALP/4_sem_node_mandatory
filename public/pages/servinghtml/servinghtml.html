@@ -3,15 +3,64 @@
     <p>
         - Loops
     </p>
-    <p>
+    <pre><p>
         - Nodemon
-    </p>
-    <p>
+        nodemon
+nodemon is a tool that restarts the program every time a change is made
+npm install -g nodemon
+to run nodemon be in the correct folder - nodemon.cmd app.js
+app.js being the program/file to run.
+
+"scripts": {
+    "start-dev": "cross-env PORT=3000 nodemon app.js",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+
+    // nodemon -ext=html,json,js app.js
+// for nodemon to restart when other files than just js files are changed
+    </p></pre>
+    <pre><p>
         - Sending Data
-    </p>
-    <p>
+
+        // order
+//callback function on app.get to get it to execute when the route is hit (req, res is client server model)
+//res.send is response, we send json {}
+//express converts the message to json, even though it is a javascript object.
+app.get("/", (req, res) => {
+    res.send({ message:"We did it!" });
+});
+
+// implement a route called welcome that welcomes the client
+// same task implement a rout handler on the enpoint /welcome
+app.get("/welcome", (req, res) => {
+    res.send({ message:"Welcome client you made it!" });
+});
+
+app.get("/clientgreeting/:name", (req, res) => {
+    res.send({greeting: `Hello there, ${req.params.name}`});
+});
+
+// query url - kangaroofacts?cankick=true
+app.get("/kangaroofacts", (req,res) => {
+    res.send(req.query);
+});
+
+// post endpoint use app.xxx to do things like patch/delete/put/get and so forth
+app.post("/mirror", (req, res) => {
+    console.log(req.body);
+    res.send(req.body);
+});
+    </p></pre>
+    <pre><p>
         -  Pure Data CRUDable REST API
-    </p>
+
+        //REST API Conventions
+//HTTP Methods and Endpoints
+//Order of methods - Get, Post, Put, Patch, Delete
+//Endpoint should match a specific standard, so you understand what it does just by looking at it
+//collection, table should always be plural in the database and REST API
+
+    </p></pre>
 
     <script src="./pages/servinghtml/servinghtml.js"></script>
     
