@@ -1,54 +1,50 @@
 
     <h1>Introduction</h1>
 
-    <pre><p>
-        - Intro to the course. Information about the mandatories / exam. Expectations.
-    </p></pre>
-    <pre><p>
-        //git commands. (steps to push to a repository)
-        //step 1. git add -A (adds all the files, if you use "." then it only adds the files where you are located)
-        //step 2. git status (not neccessary to be done)
-        //step 3. git commit -m "message"
-        //step 4. git push
-        // git pull to pull the repository
-    </p></pre>
-    <pre><p>
-        - Variables.
-        Let
-        Const
-        Var
-
-        // "use strict";
-        // strict mode, needs to be on the top level. Can also be on certain functions.
-        
-        // Bad practice
-        // var globalVariable = "Don't do this";
-        
-        // Never ever do this
-        // totalGlobalVariable = "is this okay?";
-        
-        // do not use var, const and let is new and has been added because var is deprecated
-        // needs to be initialized or it will give an error(a value must be given)
-        // const cannot be overwritten, but there can be added on to it, for example const tal = 1; tal + 1;
-        const memeTop = "Mom: We have Javascript at home";
-        // does not need to be initialized
-        let memeBottom = "Javascript at home: Node.js";
-
-    </p></pre>
     <p>
-        // + is concatenation
-        // , is to seperate variables(consts)
-        // type coercion(interpret(change) the type)
-        // javascript is an interpreted language, it tries to understand what is written (const + a number(int) becomes a string)
-        // need to understand type coercion to avoid it
-        // = is assignment, == is it equal but doesnt matter what datatype, === is hard equality datatype has to match
+- Intro to the course. Information about the mandatories / exam. Expectations.<br>
+    </p>  
+    <p>
+Git commands<br>
+<pre><code>step 1. git add -A (adds all the files, if you use "." then it only adds the files where you are located)
+step 2. git status (not neccessary to be done)
+step 3. git commit -m "message"
+step 4. git push
+git pull to pull the repository</code></pre>
     </p>
-    <pre><p>
-        - REST API conventions.
-HTTP Methods and Endpoints
-Order of methods - Get, Post, Put, Patch, Delete
-Endpoint should match a specific standard, so you understand what it does just by looking at it
+    <p>
+- Variables.<br>
+"use strict";<br>
+strict mode, needs to be on the top level. Can also be on certain functions.<br>
+        
+Bad practice<br>
+<pre><code>var globalVariable = "Don't do this";</code></pre>
+        
+Never ever do this<br>
+<pre><code>totalGlobalVariable = "is this okay?";</code></pre>
+        
+do not use var, const and let is new and has been added because var is deprecated<br>
+needs to be initialized or it will give an error(a value must be given)<br>
+const cannot be overwritten, but there can be added on to it, for example const tal = 1; tal + 1;<br>
+<pre><code>const memeTop = "Mom: We have Javascript at home";</code></pre>
+does not need to be initialized<br>
+<pre><code>let memeBottom = "Javascript at home: Node.js";</code></pre>
+
+    </p>
+    <p>
++ is concatenation<br>
+, is to seperate variables(consts)<br>
+type coercion(interpret(change) the type)<br>
+javascript is an interpreted language, it tries to understand what is written (const + a number(int) becomes a string)<br>
+need to understand type coercion to avoid it<br>
+= is assignment, == is it equal but doesnt matter what datatype, === is hard equality datatype has to match<br>
+    </p>
+    <p>
+- REST API conventions.<br>
+HTTP Methods and Endpoints<br>
+Order of methods - Get, Post, Put, Patch, Delete<br>
+Endpoint should match a specific standard, so you understand what it does just by looking at it<br>
 collection, table should always be plural in the database and REST API
-    </p></pre>
+    </p>
 
     <script src="./pages/introduction/introduction.js"></script>

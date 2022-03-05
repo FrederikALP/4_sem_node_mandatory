@@ -38,3 +38,14 @@
   margin-top: 50px;
   height: 1500px;
   }
+
+  pre code {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1.30769231;
+    border-radius: 5px;
+    margin: 0;
+    padding: 12px;
+    overflow: auto;
+    background-color: #6a64515d;
+  }

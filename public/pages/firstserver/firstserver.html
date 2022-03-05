@@ -1,45 +1,45 @@
 
     <h1>First Server</h1>
 
-    <pre><p>
-        - Callback functions
+<p>
+- Callback functions
 
-        const running = (name) => console.log(`${name} is running `);
+<pre><code>const running = (name) => console.log(`${name} is running `);</code></pre>
 // this is a callback function. The function is making a call back to a different function.
-doActionWithSomeone(running, "Anders");
+<pre><code>doActionWithSomeone(running, "Anders");</code></pre>
 
-// oneliner callback
-// doActionWithSomeoneOneLiner((name) => (console.log(`${name} is doing`), 'Frederik'));
-doActionWithSomeone(name => (console.log(`${name} anything`)), "stuff");
-    </p></pre>
-    <p>
-        - Clean code / code conventions
+oneliner callback
+<pre><code>doActionWithSomeoneOneLiner((name) => (console.log(`${name} is doing`), 'Frederik'));</code></pre>
+<pre><code>doActionWithSomeone(name => (console.log(`${name} anything`)), "stuff");</code></pre>
     </p>
-    <pre><p>
-        - Package.json
+    <p>
+- Clean code / code conventions
+    </p>
+    <p>
+- Package.json <br>
 
-        // entrypoint       
-java - pom.xml                      node/javascript - package.json
-Use `npm install "pkg"` afterwards to install a package and
-    save it as a dependency in the package.json file.
-    </p></pre>
-    <pre><p>
-        - Importing in Node.js
+Entrypoint  <br>     
+java - pom.xml                      node/javascript - package.json<br>
+Use `npm install "pkg"` afterwards to install a package and<br>
+save it as a dependency in the package.json file.<br>
+    </p>
+    <p>
+- Importing in Node.js<br>
 
-        //import express
-        //importing library
-        const express = require("express");
-        //importing app
-        const app = express();
-        // oneliner(cannot access lib functions)
-        // const app = require("express")();
-    </p></pre>
-    <pre><p>
-        - Body Parsing
+Import express<br>
+importing library<br>
+<pre><code>const express = require("express");</code></pre><br>
+importing app<br>
+const app = express();<br>
+oneliner(cannot access lib functions)<br>
+<pre><code>const app = require("express")();</code></pre><br>
+    </p>
+    <p>
+- Body Parsing<br>
 
-        // allow us to parse json (body-parser)
-app.use(express.json());
-    </p></pre>
+allow us to parse json (body-parser)<br>
+<pre><code>app.use(express.json());</code></pre>
+    </p>
 
 
     <script src="./pages/firstserver/firstserver.js"></script>
