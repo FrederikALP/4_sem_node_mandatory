@@ -1,8 +1,23 @@
 const express = require("express");
 const app = express();
 
-app.use(express.static("public"));
+//app.use(express.static("public"));
+//importing router
+const frontpageRouter = require("./routers/frontpage.js");
+const firstserverRouter = require("./routers/firstserver.js");
+const introductionRouter = require("./routers/introduction.js");
+const servinghtmlRouter = require("./routers/servinghtml.js");
+const ssrRouter = require("./routers/ssr.js");
+//router
+app.use(introductionRouter.router);
+app.use(firstserverRouter.router);
+app.use(frontpageRouter.router);
+app.use(servinghtmlRouter.router);
+app.use(ssrRouter.router);
 
+
+/*
+//This is deprecated as routing has been implemented
 const fs = require("fs");
 
 const header = fs.readFileSync("./public/components/header/header.html").toString();
@@ -50,10 +65,10 @@ app.get("/ssr", (req, res) => {
     res.send(ssrPage);
 });
 
-/*app.get("/notesexpress", (req, res) => {
+app.get("/notesexpress", (req, res) => {
     res.send(notesexpressPage);
-});*/
-
+});
+*/
 
 const PORT = process.env.PORT || 9000;
 

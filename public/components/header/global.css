@@ -3,6 +3,10 @@
     background-color: #6a645193;
   }
 
+  nav {
+    margin-bottom: 50px;
+  }
+
   ul {
     list-style-type: none;
     margin: 0;
@@ -26,8 +30,6 @@
     text-decoration: none;
   }
 
-
-  
   li a:hover:not(.active) {
     background-color: #111;
   }
@@ -39,9 +41,9 @@
   .bigdiv {
     font-size: 13px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 50px;
     height: 1500px;
-    margin-left: 1em;
+    margin: auto;
+    width: 50%;
   }
 
   pre code {
