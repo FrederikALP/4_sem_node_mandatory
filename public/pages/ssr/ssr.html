@@ -2,17 +2,14 @@
     <h1>SSR</h1>
 
     <p>
--  Pure Data CRUDable REST API - Part II - Done!<br>
-    </p>
-    <p>
-- Serving Static Assets in Express<br>
+        <h3>Serving Static Assets in Express</h3>
 
 Specifies the static folder for the client, allowing the client to access the files on this path<br>
 It is a security feature to allow the client only access to certain parts<br>
 <pre><code>app.use(express.static('public'));</code></pre>
     </p>
     <p>
-- One way to do SSR in Express.<br>
+        <h3>SSR in Express</h3>
 
 <pre><code>const fs = require("fs");
 
@@ -30,7 +27,6 @@ const themeparkPage = nav.replace("%%TITLE_PLACEHOLDER%%", "Have fun!") + themep
 app.get("/", (req, res) => {
     res.send(frontpagePage);
 });</code></pre>
+The files are concatenated into a page that is then delivered to the client.<br>
+The SSR is used for several reasons, among those SEO, load times are the bigger ones.<br>
     </p>
-
-    <script src="./pages/ssr/ssr.js"></script>
-    

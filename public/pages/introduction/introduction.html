@@ -2,10 +2,14 @@
     <h1>Introduction</h1>
 
     <p>
-- Intro to the course. Information about the mandatories / exam. Expectations.<br>
+        <h3>Tools</h3>
+Visual Studio Code is an editor that we use for this course.<br>
+It is a different and less complicated/less intrusive editor compared to intelliJ that we worked with before <br>
+We have also used Postman, it is used for sending or recieving data from our server, being the client side on the spectrum of the client-server model.<br>
+You can use HTTP methods like Get, Post, Put, Patch, Delete to manipulate or recieve data.
     </p>  
     <p>
-Git commands<br>
+<h3>Git commands</h3>
 <pre><code>step 1. git add -A (adds all the files, if you use "." then it only adds the files where you are located)
 step 2. git status (not neccessary to be done)
 step 3. git commit -m "message"
@@ -13,21 +17,21 @@ step 4. git push
 git pull to pull the repository</code></pre>
     </p>
     <p>
-- Variables.<br>
+<h3>Variables</h3>
 "use strict";<br>
 strict mode, needs to be on the top level. Can also be on certain functions.<br>
         
-Bad practice<br>
+Bad practice
 <pre><code>var globalVariable = "Don't do this";</code></pre>
         
-Never ever do this<br>
+Never ever do this
 <pre><code>totalGlobalVariable = "is this okay?";</code></pre>
         
 do not use var, const and let is new and has been added because var is deprecated<br>
 needs to be initialized or it will give an error(a value must be given)<br>
-const cannot be overwritten, but there can be added on to it, for example const tal = 1; tal + 1;<br>
+const cannot be overwritten, but there can be added on to it, for example const tal = 1; tal + 1;
 <pre><code>const memeTop = "Mom: We have Javascript at home";</code></pre>
-does not need to be initialized<br>
+does not need to be initialized
 <pre><code>let memeBottom = "Javascript at home: Node.js";</code></pre>
 
     </p>
@@ -40,11 +44,9 @@ need to understand type coercion to avoid it<br>
 = is assignment, == is it equal but doesnt matter what datatype, === is hard equality datatype has to match<br>
     </p>
     <p>
-- REST API conventions.<br>
+<h3>REST API conventions</h3>
 HTTP Methods and Endpoints<br>
 Order of methods - Get, Post, Put, Patch, Delete<br>
 Endpoint should match a specific standard, so you understand what it does just by looking at it<br>
 collection, table should always be plural in the database and REST API
     </p>
-
-    <script src="./pages/introduction/introduction.js"></script>

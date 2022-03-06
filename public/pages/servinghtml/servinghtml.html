@@ -1,11 +1,18 @@
     <h1>Serving HTML</h1>
 
     <p>
-- Loops<br>
+        <h3>Loops</h3>
+We avoid using loops in javascript because it is too long to write, errors can easily happen and it is not as effective compared to map.<br>
+Thus we use map to achieve the same results instead.<br>
+An example of map being used.
+<pre><code>const discountedPhones = smartPhones.map(phone => 
+    {phone.price -= 500;
+    return phone;
+});</code></pre>
     </p>
 
     <p>
-- Nodemon<br>
+        <h3>Nodemon</h3>
 nodemon is a tool that restarts the program every time a change is made<br>
 <pre><code>npm install -g nodemon</code></pre>
 to run nodemon be in the correct folder - nodemon.cmd app.js<br>
@@ -24,7 +31,7 @@ for nodemon to restart when other files than just js files are changed<br>
     </p>
 
     <p>
-- Sending Data<br>
+        <h3>Sending Data</h3>
 
 order<br>
 callback function on app.get to get it to execute when the route is hit (req, res is client server model)<br>
@@ -55,16 +62,3 @@ post endpoint use app.xxx to do things like patch/delete/put/get and so forth<br
     res.send(req.body);
 });</code></pre>
     </p>
-
-    <p>
--  Pure Data CRUDable REST API<br>
-
-REST API Conventions<br>
-HTTP Methods and Endpoints<br>
-Order of methods - Get, Post, Put, Patch, Delete<br>
-Endpoint should match a specific standard, so you understand what it does just by looking at it<br>
-collection, table should always be plural in the database and REST API<br>
-    </p>
-
-    <script src="./pages/servinghtml/servinghtml.js"></script>
-    

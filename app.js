@@ -18,7 +18,7 @@ const notesexpress = fs.readFileSync("./public/pages/notesexpress/notesexpress.h
 
 //can also do %%CSS_LINK%% and replace the css for each file
 // if you wanna replace 2 strings another option is to replace TITLE first and then
-// take the result and replace the next item
+// take the result and replace the next item/string
 const frontpagePage = header.replace("%%TITLE_PLACEHOLDER%%", "Frontpage") + nav.replace("%%HOME_ACTIVE%%", "active") + frontpage + footer;
 const introductionPage = header.replace("%%TITLE_PLACEHOLDER%%", "Introduction") + nav.replace("%%INTRO_ACTIVE%%", "active") + introduction + footer;
 const firstserverPage = header.replace("%%TITLE_PLACEHOLDER%%", "First Server") + nav.replace("%%FIRST_ACTIVE%%", "active") + firstserver + footer;
@@ -50,9 +50,9 @@ app.get("/ssr", (req, res) => {
     res.send(ssrPage);
 });
 
-app.get("/notesexpress", (req, res) => {
+/*app.get("/notesexpress", (req, res) => {
     res.send(notesexpressPage);
-});
+});*/
 
 
 const PORT = process.env.PORT || 9000;

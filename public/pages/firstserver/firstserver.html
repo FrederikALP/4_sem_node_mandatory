@@ -2,7 +2,7 @@
     <h1>First Server</h1>
 
 <p>
-- Callback functions
+    <h3>Callback functions</h3>
 
 <pre><code>const running = (name) => console.log(`${name} is running `);</code></pre>
 // this is a callback function. The function is making a call back to a different function.
@@ -13,34 +13,38 @@ oneliner callback
 <pre><code>doActionWithSomeone(name => (console.log(`${name} anything`)), "stuff");</code></pre>
     </p>
     <p>
-- Clean code / code conventions
+        <h3>Hoisting</h3>
+is a part of node/javascript that pulls the necessary function called upon to the top <br>
+an example that we used is
+<pre><code>console.log(add(2, 8));
+function add(x, y) {
+    return x + y;
+}</code></pre>
+the function add, will be run before the console.log, and thus it will give the result of 10 and work correctly.<br>
     </p>
     <p>
-- Package.json <br>
-
-Entrypoint  <br>     
-java - pom.xml                      node/javascript - package.json<br>
-Use `npm install "pkg"` afterwards to install a package and<br>
-save it as a dependency in the package.json file.<br>
+<h3>Package.json</h3>    
+<pre>java - pom.xml                      node/javascript - package.json
+package.json is a file the consists of the the dependencies that the program is supposed to install when "npm i" is ran.
+on a side note a json file must be valid json by using curly brackets {}
+It also consists of eventual scripts like "npm run start-dev"
+Use `npm install "pkg"` afterwards to install a package and
+save it as a dependency in the package.json file.</pre>
     </p>
     <p>
-- Importing in Node.js<br>
+        <h3>Importing in Node.js</h3>
 
 Import express<br>
 importing library<br>
-<pre><code>const express = require("express");</code></pre><br>
+<pre><code>const express = require("express");</code></pre>
 importing app<br>
-const app = express();<br>
+<pre><code>const app = express();</code></pre>
 oneliner(cannot access lib functions)<br>
-<pre><code>const app = require("express")();</code></pre><br>
+<pre><code>const app = require("express")();</code></pre>
     </p>
     <p>
-- Body Parsing<br>
+        <h3>Body Parsing</h3>
 
 allow us to parse json (body-parser)<br>
 <pre><code>app.use(express.json());</code></pre>
-    </p>
-
-
-    <script src="./pages/firstserver/firstserver.js"></script>
-    
+    </p> 
