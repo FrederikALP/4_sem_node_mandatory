@@ -11,6 +11,10 @@ It is a security feature to allow the client only access to certain parts<br>
     <p>
         <h3>SSR in Express</h3>
 
+        The files are concatenated into a page that is then delivered to the client.<br>
+The Server Side Rendering(SSR) is used for several reasons, among those SEO, load times are the bigger ones.<br>
+The full page is sent to the client already rendered, rather than sending a html file and letting the client interpret it.
+
 <pre><code>const fs = require("fs");
 
 const nav = fs.readFileSync("./public/components/nav/nav.html").toString();
@@ -27,6 +31,4 @@ const themeparkPage = nav.replace("%%TITLE_PLACEHOLDER%%", "Have fun!") + themep
 app.get("/", (req, res) => {
     res.send(frontpagePage);
 });</code></pre>
-The files are concatenated into a page that is then delivered to the client.<br>
-The SSR is used for several reasons, among those SEO, load times are the bigger ones.<br>
     </p>

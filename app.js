@@ -8,12 +8,14 @@ const introductionRouter = require("./routers/introduction.js");
 const firstserverRouter = require("./routers/firstserver.js");
 const servinghtmlRouter = require("./routers/servinghtml.js");
 const ssrRouter = require("./routers/ssr.js");
+const notesexpressRouter = require("./routers/notesexpress.js")
 //router
 app.use(frontpageRouter.router);
 app.use(introductionRouter.router);
 app.use(firstserverRouter.router);
 app.use(servinghtmlRouter.router);
 app.use(ssrRouter.router);
+app.use(notesexpressRouter.router);
 
 /*
 //This is deprecated as routing has been implemented
