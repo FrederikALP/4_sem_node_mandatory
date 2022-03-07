@@ -4,17 +4,16 @@ const app = express();
 //app.use(express.static("public"));
 //importing router
 const frontpageRouter = require("./routers/frontpage.js");
-const firstserverRouter = require("./routers/firstserver.js");
 const introductionRouter = require("./routers/introduction.js");
+const firstserverRouter = require("./routers/firstserver.js");
 const servinghtmlRouter = require("./routers/servinghtml.js");
 const ssrRouter = require("./routers/ssr.js");
 //router
+app.use(frontpageRouter.router);
 app.use(introductionRouter.router);
 app.use(firstserverRouter.router);
-app.use(frontpageRouter.router);
 app.use(servinghtmlRouter.router);
 app.use(ssrRouter.router);
-
 
 /*
 //This is deprecated as routing has been implemented
